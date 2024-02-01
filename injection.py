@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# inject.py
-# The C program provided at the GitHub Link given below can be used as a reference for writing the python script.
-# GitHub Link: https://github.com/0x00pf/0x00sec_code/blob/master/mem_inject/infect.c 
-
 import ctypes
 import sys
 import struct
