@@ -1,6 +1,7 @@
 import ctypes
 import sys
 import struct
+import time
 
 # Macros defined in <sys/ptrace.h>
 # https://code.woboq.org/qt5/include/sys/ptrace.h.html
@@ -55,7 +56,7 @@ libc.ptrace.restype = ctypes.c_uint64
 
 # Attach to the process
 libc.ptrace(PTRACE_ATTACH, pid, None, None)
-ctypes.windll.kernel32.Sleep(1000) # Give some time to the process to stop
+time.sleep(1) # Give some time to the process to stop
 
 # Retrieve the value stored in registers
 libc.ptrace(PTRACE_GETREGS, pid, None, ctypes.byref(registers))
